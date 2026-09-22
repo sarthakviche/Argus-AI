@@ -1,0 +1,368 @@
+ARGUS AI — FRONTEND REDESIGN MASTER PROMPT
+
+Act as a senior product designer and frontend engineer with experience designing premium fintech and enterprise software.
+
+Your task is to completely restructure and redesign the existing Argus AI frontend into a polished, production-quality financial intelligence product.
+
+IMPORTANT:
+Do not change, break, remove, or rewrite any existing functionality.
+
+Preserve all:
+- API integrations and contracts
+- /predict functionality
+- ML inference and risk scoring
+- forms and submissions
+- routing
+- state management
+- filters
+- charts using real data
+- existing working workflows
+- backend communication
+
+You are redesigning HOW the product looks, feels, and communicates, not WHAT the product does.
+
+Before making changes, inspect the existing frontend and understand its routes, components, functionality, API integrations, and which parts are real versus mocked/hard-coded.
+
+Do not invent functionality.
+
+If a feature doesn't actually exist, don't expose it in the UI. Remove fake or unnecessary elements rather than designing around them.
+
+--------------------------------------------------
+DESIGN DIRECTION
+--------------------------------------------------
+
+Use the product discipline of modern enterprise financial software such as Stampli:
+
+https://www.stampli.com/
+
+Do not copy Stampli's branding, assets, or layouts. Use it as inspiration for:
+- clean information hierarchy
+- generous whitespace
+- contextual workflows
+- focused screens
+- clear calls to action
+- restrained dashboards
+- professional enterprise aesthetics
+
+The final Argus UI should feel like a serious fintech product, not a student project, generic SaaS template, crypto dashboard, or AI-generated/vibe-coded interface.
+
+Think:
+MINIMAL · PRECISE · CALM · PREMIUM · FINANCIAL · INTELLIGENT
+
+--------------------------------------------------
+CORE DESIGN PRINCIPLES
+--------------------------------------------------
+
+1. RADICAL MINIMALISM
+
+Every screen must have a clear purpose and a clear primary CTA.
+
+Remove anything unnecessary, redundant, decorative, hard-coded, or not actionable.
+
+Do not fill space just because it is available.
+
+Avoid dashboard clutter, excessive KPI cards, badges, pills, buttons, icons, filters, borders, and decorative charts.
+
+Every element should help the user:
+UNDERSTAND → INVESTIGATE → DECIDE → ACT.
+
+2. ONE CONSISTENT VISUAL LANGUAGE
+
+The entire application must feel like one coherent product.
+
+Use consistent:
+- spacing
+- typography
+- component geometry
+- buttons
+- inputs
+- tables
+- cards
+- navigation
+- charts
+- modals
+- states
+- animations
+
+Create reusable design tokens/components rather than styling every page independently.
+
+3. FINTECH COLOR SYSTEM
+
+Primary identity: BLUE + WHITE.
+
+Use a restrained palette:
+
+Deep Navy: #0B1630
+Primary Blue: #315BEA
+Accent Blue: #5B7CFF
+Soft Blue: #EAF0FF
+Very Light Blue: #F5F8FF
+White: #FFFFFF
+Off White: #FAFBFD
+Primary Text: #101828
+Secondary Text: #667085
+Border: #E5EAF2
+
+Use subtle blue gradients where appropriate.
+
+Prefer:
+Deep Navy → Blue
+Blue → Soft Blue
+White → Light Blue
+
+Do not overuse gradients.
+
+Avoid neon, excessive purple, glassmorphism, cyberpunk styling, or rainbow dashboards.
+
+Use restrained semantic colors for:
+- High Risk → red
+- Review → amber
+- Legitimate → green
+
+4. TYPOGRAPHY
+
+Use SF Pro / SF Pro Display as the primary typeface, with Inter/system-ui as fallback.
+
+Use Playfair Display Italic sparingly as an editorial accent for important words in large headings.
+
+Example:
+
+"Fraud intelligence,
+made actionable."
+
+Do not use serif typography for body copy, tables, navigation, buttons, or technical information.
+
+Typography should carry much of the visual personality.
+
+5. COMPONENT STYLE
+
+Use clean rounded corners:
+
+Cards: 16–20px
+Large panels: 20–24px
+Inputs/buttons: 10–12px
+
+Use subtle shadows and borders.
+
+Avoid heavy shadows, thick borders, excessive rounding, or overly "bubbly" UI.
+
+6. WHITESPACE
+
+Use generous whitespace and a disciplined spacing system.
+
+Prefer clarity over information density.
+
+The interface should feel spacious without feeling empty.
+
+--------------------------------------------------
+ARGUS INFORMATION ARCHITECTURE
+--------------------------------------------------
+
+Keep navigation limited to actual functionality.
+
+Prefer:
+
+Overview
+Alerts
+Investigations
+Transactions
+Analytics
+
+----------------
+Settings
+
+Do not expose unfinished or nonexistent features.
+
+The product should guide the user through:
+
+Transaction
+→ Detection
+→ Alert
+→ Investigation
+→ Evidence
+→ Decision
+
+The Investigation Workspace should become the signature Argus experience.
+
+--------------------------------------------------
+KEY SCREEN PRINCIPLES
+--------------------------------------------------
+
+COMMAND DASHBOARD
+
+Answer immediately:
+
+What needs my attention?
+What changed?
+What should I investigate?
+
+Do not create a wall of KPI cards.
+
+Prioritize alerts and actionable information.
+
+ALERT MANAGEMENT
+
+Treat alerts like an analyst work queue.
+
+Show only useful information such as:
+Risk
+Transaction
+Customer
+Amount
+Location
+Detected
+Status
+
+Make "Investigate" the obvious action.
+
+INVESTIGATION WORKSPACE
+
+This is the most important screen.
+
+Prioritize:
+
+What happened?
+Why was it flagged?
+What evidence supports the risk?
+What is connected to it?
+What should I do next?
+
+Make risk explanations understandable.
+
+Example:
+
+91 / 100
+HIGH RISK
+
++32 Amount anomaly
++24 New device
++18 Location mismatch
++17 High velocity
+
+Keep detailed model outputs available, but make them secondary to the actual investigation.
+
+FRAUD DETECTION FORM
+
+Preserve the existing functional form and /predict workflow.
+
+Redesign the experience so the result is immediately understandable:
+
+Risk Score
+Risk Level
+Why it was flagged
+Triggered rules
+Next action
+
+Do not expose technical complexity unless useful.
+
+ANALYTICS
+
+Only show meaningful analytics.
+
+Do not use charts as decoration.
+
+If data is mocked/hard-coded, do not present it as live production data.
+
+--------------------------------------------------
+INTERACTION DESIGN
+--------------------------------------------------
+
+Add subtle, premium micro-interactions:
+
+- 150–250ms transitions
+- refined hover states
+- subtle elevation
+- smooth loading states
+- skeleton states where appropriate
+- clean focus states
+- restrained page transitions
+
+Implement a custom cursor.
+
+The cursor should be minimal and professional:
+- small dot/circle by default
+- subtle expansion over interactive elements
+- smooth transitions
+- no gaming-style effects
+- respect prefers-reduced-motion
+
+The cursor should enhance the experience, not distract from it.
+
+--------------------------------------------------
+RESPONSIVENESS & ACCESSIBILITY
+--------------------------------------------------
+
+The redesign must work properly across:
+
+Desktop
+Laptop
+Tablet
+Mobile
+
+Do not simply shrink the desktop interface. Recompose layouts where necessary.
+
+Maintain:
+- keyboard navigation
+- focus states
+- accessible labels
+- semantic HTML
+- sufficient contrast
+- reduced-motion support
+
+Do not communicate important information through color alone.
+
+--------------------------------------------------
+IMPORTANT IMPLEMENTATION RULES
+--------------------------------------------------
+
+Do not rewrite the application blindly.
+
+First understand the existing code.
+
+Then establish the global design system.
+
+Then redesign the application shell/navigation.
+
+Then progressively redesign the major screens.
+
+Do not change backend logic.
+
+Do not change API contracts.
+
+Do not replace working functionality with mock functionality.
+
+Do not introduce unnecessary libraries.
+
+Use the existing React/Vite/Tailwind/React Router/Recharts/Lucide ecosystem wherever possible.
+
+After each major redesign, verify that the original functionality still works.
+
+--------------------------------------------------
+FINAL QUALITY BAR
+--------------------------------------------------
+
+Before finishing, review the entire frontend as a senior fintech product designer.
+
+Ask:
+
+Does every screen have a clear purpose?
+Is the primary action obvious?
+Is anything unnecessary?
+Is anything fake or hard-coded being presented as real?
+Is the hierarchy clear?
+Is the visual language consistent?
+Are there too many cards, colors, buttons, or charts?
+Does the typography feel intentional?
+Does the product feel trustworthy and precise?
+Does anything look AI-generated or template-like?
+
+If yes, simplify or redesign it.
+
+The goal is not to add more UI.
+
+The goal is to make Argus feel like a carefully designed financial intelligence product.
+
+PRESERVE THE FUNCTIONALITY.
+REDESIGN THE EXPERIENCE.
+REMOVE THE NOISE.
+MAKE THE PRODUCT FEEL REAL.

@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy-deep: #0B1630;
+    --blue-primary: #315BEA;
+    --blue-accent: #5B7CFF;
+    --blue-soft: #EAF0FF;
+    --blue-light: #F5F8FF;
+    --text-primary: #101828;
+    --text-secondary: #667085;
+    --border-color: #E5EAF2;
+    --bg-app: #FAFBFD;
+    
+    --risk-high: #DC2626;
+    --risk-review: #D97706;
+    --risk-low: #16A34A;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    cursor: default;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+  }
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Hide custom cursor on touch devices or reduced motion */
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .argus-cursor-dot,
+  .argus-cursor-ring {
+    display: none !important;
+  }
+  body {
+    cursor: auto !important;
+  }
+}
+
+/* Glassmorphism & Elevation */
+.card-elevation {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.04), 0px 1px 2px rgba(16, 24, 40, 0.02);
+  border-radius: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-elevation:hover {
+  box-shadow: 0px 8px 24px -4px rgba(16, 24, 40, 0.06), 0px 2px 6px -1px rgba(16, 24, 40, 0.03);
+}
+
+.panel-elevation {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 2px 4px rgba(16, 24, 40, 0.03);
+  border-radius: 22px;
+}
+
+/* Custom Input Focus State */
+.argus-input {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  transition: all 0.15s ease-in-out;
+}
+
+.argus-input:focus {
+  outline: none;
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 4px rgba(49, 91, 234, 0.12);
+}
+
+/* Pulse indicator animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
